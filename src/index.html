@@ -7,38 +7,48 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+   <div class="preloader">
+       <div class="loader"></div>
+   </div>
+   
     <header>
       <nav>
         <div class="logo">Александра Брусянина</div>
         <div class="menu">
             <ul>
-                <li>Обо мне</li>
-                <li>Услуги</li>
-                <li>Кейсы</li>
-                <li>Прайс</li>
-                <li>Отзывы</li>
-                <li>Контакты</li>
+                <li><a href="#">Обо мне</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Кейсы</a></li>
+                <li><a href="#">Прайс</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
             </ul>
         </div>
     </nav>      
     </header>
     
-    <div class="main"><div class="title__container">
+
+    <section class="main">
+       <div class="title__container">
         <h1>Привет <br> Я Александра Брусянина </h1>
         <h4>Фулл стек веб-разработчик</h4>
-        <input type="submit" value="Обо мне">
-        <input type="submit" value="Мои работы">
-    </div></div>
+        <input type="button" value="Обо мне">
+        <input type="button" value="Мои работы">
+       </div>
+    </section>
+  
     
    <div class="about_me">
         <h2>ОБО МНЕ</h2>
         <img class="my-foto"src="img/boy2.png" alt="">
         <h4 class="me1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptatibus ducimus impedit assumenda reiciendis, doloribus aliquid voluptatum voluptas hic quam, nostrum soluta. </h4>
         <h4 class="me2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, atque nam. Optio dignissimos autem hic, reprehenderit, cum omnis, alias maxime, non adipisci dolorum quia numquam eius culpa nihil eligendi repellendus.</h4>
-        <input type="submit" value="Скачать резюме">
+       <a href="#" download="summary"><button id="button-summary">Скачать резюме</button></a>
     </div> 
     
+    
     <section class="i_can">
+      <div class="parallax">
        <h2>ЧТО Я УМЕЮ</h2>
         <ul>
             <li>
@@ -62,19 +72,23 @@
                 <h4>Lorem ipsum dolor sit amet placerat <br> facilisis felis mi in tempus eleifend <br> pellentesque natoque.</h4> 
             </li>         
         </ul>
+      </div>
     </section>
     
     <section class="case">
          <h2>КЕЙСЫ</h2>
          <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptatibus ducimus impedit assumenda reiciendis</h4>
-         <img class="scrin" src="" alt="">
-         <h3>CLIENT:</h3>
-         <p>Какая-то компания</p>
-         <h3>WEBSITE:</h3>
-         <a href="http://www.somedomain.com/" target="_blank">http://www.somedomain.com</a><br>
-         <input type="submit" value="VISIT LIVE SITE">
-         <h3>Название проекта</h3>  
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptatibus ducimus impedit assumenda reiciendis, doloribus aliquid voluptatum voluptas hic quam, nostrum soluta. Nihil cum natus quaerat a doloribus!</p>                                              
+         <img class="scrin" src="img/scrin.png" alt=""> 
+         <h3 id="case-client">CLIENT: <br><br> <p id="case-company" >Какая-то компания</p></h3> 
+         <h3 class="case-pr" >Название проекта</h3> 
+         <p class="case-pr">Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor incididunt ut labore et dolore magna
+aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>    
+         <h3 id="case-web" >WEBSITE:</h3>
+         <a class="case-site" href="http://www.somedomain.com/" target="_blank">http://www.somedomain.com</a><br>
+         <a href="http://www.somedomain.com/" target="_blank"><input class="case-visit" type="button" value="VISIT LIVE SITE"></a>
+
+                                                  
     </section>
     
     <section class="calculator">
@@ -99,12 +113,17 @@
             <option>да</option>
             <option>нет</option>
         </select>
-        <h4>Строки</h4>
-        <h4>Стоимость</h4>
+        <div>
+        <h4 id="calculator-line" >Строки</h4>
         <h4 class="line">0</h4>
+        </div>
+        <div>
+        <h4 id="calculator-price" >Стоимость</h4>
         <h4 class="price">0</h4>
+        </div>
     </section>
-        
+       
+       <div class="parallax">  
         <section class="statistics">
            <h2>Немного статистики</h2>
             <ul>
@@ -130,7 +149,8 @@
                 </li>
             </ul>
         </section>
-        
+       </div>    
+       
         <section class="reviews">
            <h2>ОТЗЫВЫ</h2>
            <img class="reviews-photo" src="img/boy3.png" alt="">
@@ -141,35 +161,47 @@
         
         <footer class="contacts">
             <h2>МОИ КОНТАКТЫ</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo </p>
+            <p class="contacts_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo </p>
             <ul>
+              <a href="#">
                 <li>
                     <img src="img/g%D0%B5%D0%BE.png" alt="">
-                    <p>Санкт-Петербург<br>Невский проспект, 11</p>
+                    <p id="adress">Санкт-Петербург<br>Невский проспект, 11</p>
                 </li>
+              </a> 
+              <a href="#">      
                 <li>
                     <img src="img/com.png" alt="">
-                    <p class="email"><a href="mailto:info@companyname.com">info@companyname.com</a></p>
+                    <p><a id="email"href="mailto:info@companyname.com">info@companyname.com</a></p>
                 </li>
+              </a>
+              <a href="#">
                 <li>
                     <img src="img/telephone.png" alt="">
-                    <p class="tel"><a href="tel:+7 999 999-99-99">+7 999 999-99-99</a></p>
+                    <p><a id="tel" href="tel:+7 999 999-99-99">+7 999 999-99-99</a></p>
                 </li>
-            </ul>
+              </a>
+            </ul> 
             
-            <h3>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
+            <div class="clearfix"></div>   
+            <h3 id="contacts-me" >ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3> 
             <div class="write_me">
-            <input type="text" name="text_input" value="" placeholder="Имя">
-            <input type="text" name="text_input" value="" placeholder="Email"><br>
-            <textarea name="" id="" cols="48" rows="10" placeholder="Сообщение"></textarea><br>
-            <input class="button_write" type="submit" value="Отправить">
+            <input id="write-name" type="text" name="text_input" value="" placeholder="Имя">
+            <input id="write-email" type="text" name="text_input" value="" placeholder="Email"><br><br>
             </div>
+            <div>
+                <textarea  name="" id="message" cols="48" rows="10" placeholder="Сообщение"></textarea><br> </div> 
+            
+            <input id="button_write" type="submit" value="Отправить"> 
+            
+            <div id="links">
             <p class="fb"><a href="https://www.facebook.com" target="_blank"><img src="" alt=""></a></p>
             <p class="twitter"><a href="https://twitter.com/" target="_blank"><img src="" alt=""></a></p>
             <p class="git"><a href="https://github.com/" target="_blank"><img src="" alt=""></a></p>
             <p class="inst"><a href="https://www.instagram.com/" target="_blank"><img src="" alt=""></a></p> 
+            </div>
             <section class="map">
-                <input type="submit" value="I'M HERE">
+                <a href="#" ><button id="here">I'M HERE</button></a>
             </section>       
         </footer>  
 </body>
